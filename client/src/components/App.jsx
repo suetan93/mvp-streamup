@@ -21,7 +21,7 @@ const App = () => {
 
   return (
     <div className="main">
-      <h1>streamUP!</h1>
+      <h1>streamUP</h1>
       <div className="body">
         {displayHome ? <SearchBar homeState={displayHome} changeHome={changeHome} getSearchResults={getSearchResults}/> : null}
         <br />

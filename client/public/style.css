@@ -1,6 +1,6 @@
 body {
-  background-color: #e8ded2;
-  color: #fff;
+  background-color: #557571;
+  color: #f4f4f4;
   font-family: 'Arial';
 }
 
@@ -51,6 +51,7 @@ h1 {
   font-weight: 600;
 }
 
+.searchRow,
 .movieRow {
   display: flex;
   justify-content: flex-start;
@@ -87,4 +88,17 @@ h1 {
   display: flex;
   justify-content: space-between;
   border: 1px dashed red;
+}
+
+.displayEntry {
+  background-color: white;
+  margin: 0 auto;
+  width: 400px;
+  color: black;
+  border: 1px dashed blue;
+  padding: 5px;
+}
+
+.platforms {
+  border: 1px dashed green;
 }
