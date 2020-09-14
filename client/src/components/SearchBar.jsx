@@ -6,7 +6,7 @@ const SearchBar = (props) => {
   const handleSearch = (e) => {
     e.preventDefault();
     props.changeHome();
-    console.log(search)
+    props.getSearchResults(search.toLowerCase())
   }
 
   return (

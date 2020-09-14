@@ -1,5 +1,5 @@
 body {
-  background-color: #000;
+  background-color: #e8ded2;
   color: #fff;
   font-family: 'Arial';
 }
@@ -15,7 +15,7 @@ h1 {
 }
 
 .body {
-  background-color: #004242;
+  /* background-color: #004242; */
   padding: 10px;
   width: 100%;
   height: 100%;
@@ -53,10 +53,13 @@ h1 {
 
 .movieRow {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: flex-start;
+  align-content: space-between;
+  width: 660px;
+  gap: 15px;
+  flex-wrap: wrap;
   padding: 3px;
-  border: 1px dashed white;
+  border: 1px dashed red;
 }
 
 .itemEntry {
@@ -72,6 +75,12 @@ h1 {
 
 .poster {
   width: 135px;
+}
+
+.imgRow {
+  display: flex;
+  justify-content: center;
+  border: 1px dashed red;
 }
 
 .itemDetails {
