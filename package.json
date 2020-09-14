@@ -16,6 +16,7 @@
     "@babel/preset-react": "^7.10.4",
     "axios": "^0.20.0",
     "compression": "^1.7.4",
+    "eslint-plugin-react-hooks": "^4.1.2",
     "express": "^4.17.1",
     "install": "^0.13.0",
     "nodemon": "^2.0.4",
