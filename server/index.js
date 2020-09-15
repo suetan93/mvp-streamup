@@ -22,7 +22,7 @@ app.get('/search', (req, res) => {
     "headers": {
       "content-type":"application/octet-stream",
       "x-rapidapi-host":"utelly-tv-shows-and-movies-availability-v1.p.rapidapi.com",
-      "x-rapidapi-key": api.token,
+      "x-rapidapi-key": api.utelly,
       "useQueryString":true
     },
     "params": {
@@ -37,6 +37,17 @@ app.get('/search', (req, res) => {
       res.status(500).send(error)
     })
 })
+
+app.get('/poster', (req, res) => {
+  const id = req.query.id
+  axios.get(`http://www.omdbapi.com/?i=${id}&apikey=${api.omdb}`)
+    .then(results => {
+      res.status(200).send({year: results.data.Year, img: results.data.Poster})})
+    .catch(error => {
+      res.status(500).send(error)
+    })
+})
+
 
 app.listen(PORT, (err) => {
   if (err) {

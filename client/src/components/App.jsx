@@ -31,8 +31,6 @@ const App = () => {
       <div className="body">
         {displayHome ? <SearchBar changeHome={hideHome} getSearchResults={getSearchResults}/> : <button onClick={showHome}> back </button>}
         <br />
-        {displayHome ? <Movies /> : null}
-        <br />
         {!displayHome ? <SearchResults results={searchResults} /> : null}
       </div>
     </div>
