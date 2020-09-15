@@ -90,15 +90,37 @@ h1 {
   border: 1px dashed red;
 }
 
+.grayOut {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(24, 22, 22, 0.726);
+  padding: 50;
+  z-index: 1;
+}
+
 .displayEntry {
   background-color: white;
-  margin: 0 auto;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
   width: 400px;
   color: black;
   border: 1px dashed blue;
   padding: 5px;
+  z-index: 5;
 }
 
 .platforms {
   border: 1px dashed green;
+  display: flex;
+  justify-content: center;
+}
+
+.platforms:hover {
+  background: #ddd;
+  opacity: 0.3;
 }

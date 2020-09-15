@@ -5,13 +5,19 @@ import Movies from './TopMovies.jsx';
 import SearchResults from './SearchResults.jsx';
 
 const App = () => {
-  const [ displayHome, hideHome ] = useState(true);
+  const [ displayHome, setHome ] = useState(true);
   const [ searchResults, setSearchResults ] = useState([]);
 
 
-  const changeHome = () => {
-    hideHome(!displayHome)
+  const hideHome = () => {
+    setHome(false)
   }
+
+  const showHome = () => {
+    setHome(true);
+    setSearchResults([]);
+  }
+
 
   const getSearchResults = (title) => {
     axios.get('/search', {params: {title: title}})
@@ -21,13 +27,13 @@ const App = () => {
 
   return (
     <div className="main">
-      <h1>streamUP</h1>
+      <h1>STREAMUP</h1>
       <div className="body">
-        {displayHome ? <SearchBar homeState={displayHome} changeHome={changeHome} getSearchResults={getSearchResults}/> : null}
+        {displayHome ? <SearchBar changeHome={hideHome} getSearchResults={getSearchResults}/> : <button onClick={showHome}> back </button>}
         <br />
         {displayHome ? <Movies /> : null}
         <br />
-        {searchResults.length > 0 ? <SearchResults results={searchResults} /> : null}
+        {!displayHome ? <SearchResults results={searchResults} /> : null}
       </div>
     </div>
   )

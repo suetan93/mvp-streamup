@@ -15,6 +15,10 @@ const SearchResults = (props) => {
     setEntry(true);
   }
 
+  const closeModal = () => {
+    setEntry(false);
+  }
+
   return (
     <div>
       <div className="results">
@@ -25,7 +29,8 @@ const SearchResults = (props) => {
           {results.map((entry, index) => (<ResultsEntry key={index} entry={entry} index={index} handleSelect={handleSelect} />))}
         </div>
       </div>
-      {showEntry ? <SelectedEntry selected={select} /> : null }
+      {showEntry ? <div className="grayOut" /> : null}
+      {showEntry ? <SelectedEntry selected={select} closeModal={closeModal} /> : null }
     </div>
   )
 }
