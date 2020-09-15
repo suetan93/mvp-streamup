@@ -14,16 +14,24 @@ div {
   border: 0px dashed black;
 }
 
-button,
-.bttn {
+button {
   outline: none;
   border: 1px solid black;
   border-radius: 3px;
-  background-color: white;
+  background-color: none;
   padding: 3px;
   font-weight: 800;
   font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
   cursor: pointer;
+}
+
+.searchBttn {
+  border: 1px;
+  background-color: transparent;
+}
+
+button:hover {
+  transform: scale(1.1);
 }
 
 .main {
@@ -49,7 +57,9 @@ button,
 
 .search {
   display: flex;
+  flex-direction: row;
   justify-content: center;
+  align-items: center;
   margin: 0 auto;
   width: 675px;
   padding: 5px;
@@ -175,4 +185,14 @@ button,
 
 .selectTitle {
   font-size: 20px;
+}
+
+svg {
+  display: block;
+  fill: none;
+  height: 20px;
+  width: 25px;
+  stroke: #fff;
+  stroke-width: 4;
+  overflow: visible;
 }
