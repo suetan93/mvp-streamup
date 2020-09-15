@@ -13,7 +13,8 @@ const SearchBar = (props) => {
     <div className="search">
       <form onSubmit={handleSearch}>
       <input className="searchBox" type="text" placeholder="Search movie or show" value={search} onChange={e => onSearch(e.target.value)} />
-      <input type="submit" value="Search" />
+      &nbsp;
+      <input className='bttn' type="submit" value="Search" />
       </form>
     </div>
   )

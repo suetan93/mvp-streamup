@@ -1,4 +1,5 @@
 body {
+  background-image: url('https://mvp-stream.s3-us-west-1.amazonaws.com/waterskybg.jpg');
   background-color: #557571;
   color: #f4f4f4;
   font-family: 'Arial';
@@ -6,25 +7,49 @@ body {
 
 h1 {
   font-family: 'Georgia';
+  font-size: 50px;
+}
+
+div {
+  border: 0px dashed black;
+}
+
+button,
+.bttn {
+  outline: none;
+  border: 1px solid black;
+  border-radius: 3px;
+  background-color: white;
+  padding: 3px;
+  font-weight: 800;
+  font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+  cursor: pointer;
 }
 
 .main {
-  padding-top: 50px;
+  padding-top: 100px;
+  padding-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   width: 720px;
   margin: 0 auto;
   border: 1px dashed red;
 }
 
 .body {
-  /* background-color: #004242; */
-  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   width: 100%;
   height: 100%;
   border-radius: 5px;
+  border: 1px dashed red;
 }
 
 .search {
   display: flex;
+  justify-content: center;
   margin: 0 auto;
   width: 675px;
   padding: 5px;
@@ -35,6 +60,13 @@ h1 {
   width: 500px;
   height: 30px;
   border-radius: 5px;
+  border: 1px solid black;
+  outline: none;
+  font-size: 18px;
+  font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+  font-weight: 600;
+  padding-left: 5px;
+  opacity: 0.8;
 }
 
 .results,
@@ -43,8 +75,9 @@ h1 {
   background-color: #fff;
   width: 675px;
   border: 0px dashed red;
-  border-radius: 5px;
+  border-radius: 6px;
   padding: 5px;
+  opacity: 0.9;
 }
 
 .sectionHeader {
@@ -61,7 +94,7 @@ h1 {
   gap: 15px;
   flex-wrap: wrap;
   padding: 3px;
-  border: 1px dashed red;
+  border: 0px dashed red;
 }
 
 .itemEntry {
@@ -76,6 +109,11 @@ h1 {
   font-size: 14px;
 }
 
+.itemEntry:hover {
+  opacity: 0.6;
+  cursor: pointer;
+}
+
 .poster {
   width: 135px;
   height: 210px;
@@ -84,13 +122,13 @@ h1 {
 .imgRow {
   display: flex;
   justify-content: center;
-  border: 1px dashed red;
+  border: 0px dashed red;
 }
 
 .itemDetails {
   display: flex;
   justify-content: space-between;
-  border: 1px dashed red;
+  border: 0px dashed red;
 }
 
 .grayOut {
@@ -112,13 +150,17 @@ h1 {
   transform: translate(-50%, -50%);
   width: 400px;
   color: black;
-  border: 1px dashed blue;
-  padding: 5px;
+  border: 0px dashed blue;
+  border-radius: 6px;
+  padding: 8px;
   z-index: 5;
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
 }
 
 .platforms {
-  border: 1px dashed green;
+  border: 1px solid #ccc;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -128,4 +170,9 @@ h1 {
 .platforms:hover {
   background: #ddd;
   opacity: 0.3;
+  cursor: pointer;
+}
+
+.selectTitle {
+  font-size: 20px;
 }

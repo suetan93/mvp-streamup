@@ -8,7 +8,6 @@ const App = () => {
   const [ displayHome, setHome ] = useState(true);
   const [ searchResults, setSearchResults ] = useState([]);
 
-
   const hideHome = () => {
     setHome(false)
   }
@@ -18,7 +17,6 @@ const App = () => {
     setSearchResults([]);
   }
 
-
   const getSearchResults = (title) => {
     axios.get('/search', {params: {title: title}})
       .then(resp => {setSearchResults(resp.data.results)})
@@ -27,9 +25,13 @@ const App = () => {
 
   return (
     <div className="main">
-      <h1>STREAMUP</h1>
+      <div>
+       <center><h1>stream &#8682;</h1></center>
+      </div>
       <div className="body">
-        {displayHome ? <SearchBar changeHome={hideHome} getSearchResults={getSearchResults}/> : <button onClick={showHome}> back </button>}
+        <div>
+          {displayHome ? <SearchBar changeHome={hideHome} getSearchResults={getSearchResults}/> : <button onClick={showHome}> {'<< back'} </button>}
+        </div>
         <br />
         {!displayHome ? <SearchResults results={searchResults} /> : null}
       </div>

@@ -42,7 +42,7 @@ app.get('/poster', (req, res) => {
   const id = req.query.id
   axios.get(`http://www.omdbapi.com/?i=${id}&apikey=${api.omdb}`)
     .then(results => {
-      res.status(200).send({year: results.data.Year, img: results.data.Poster})})
+      res.status(200).send(results.data)})
     .catch(error => {
       res.status(500).send(error)
     })
