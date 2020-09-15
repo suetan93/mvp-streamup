@@ -4,8 +4,8 @@ import Platforms from './Platforms.jsx';
 const Modal = (props) => {
   return (
     <div className="displayEntry">
-      <div>
-        <button onClick={props.closeModal}> X </button>
+      <div align="right">
+        <button onClick={props.closeModal}> &nbsp;X&nbsp; </button>
       </div>
       <div className="selectTitle">
         <br/>
@@ -20,8 +20,7 @@ const Modal = (props) => {
         <b>Runtime:</b> {props.selectedInfo.Runtime}
       </div>
       <div>
-        <br />
-        Watch on:
+        <h3><i>Watch on:</i></h3>
       </div>
       <div>
         {props.selected.locations.map((platform, index) => (<Platforms key={index} platform={platform} />))}

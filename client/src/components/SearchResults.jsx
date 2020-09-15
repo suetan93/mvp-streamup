@@ -31,11 +31,11 @@ const SearchResults = (props) => {
           {results.length > 0 ? 'Results': 'No results found'}
         </div>
         <br />
-        <div className="searchRow">
+        <div className="searchRow" align="center">
           {results.map((entry, index) => (<ResultsEntry key={index} entry={entry} index={index} handleSelect={handleSelect} getInfo={getSelectedInfo} />))}
         </div>
       </div>
-      {showEntry ? <div className="grayOut" /> : null}
+      {showEntry ? <div className="grayOut" onClick={closeModal}/> : null}
       {showEntry ? <Modal selected={select} selectedInfo={selectedInfo} closeModal={closeModal} /> : null }
     </div>
   )
