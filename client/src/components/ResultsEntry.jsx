@@ -20,7 +20,7 @@ const ResultsEntry = (props) => {
   return (
     <div className="itemEntry" onClick={handleClick} id={props.index}>
       <div className="imgRow">
-        {info ? <img className="poster" src={`${info.img}`} onerror={if (this.src != 'error.jpg') this.src = 'error.jpg'} id={props.index} /> : null}
+        {info ? <img className="poster" src={`${info.img}`} onError={(e)=>{e.target.onerror = null; e.target.src="https://mvp-stream.s3-us-west-1.amazonaws.com/noposter.jpeg"}} id={props.index} /> : null}
       </div>
       <div className="itemDetails" id={props.index}>
         <div id={props.index}>

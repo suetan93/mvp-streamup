@@ -8,7 +8,7 @@ const SelectedEntry = (props) => {
       <br />
       {props.selected.name}
       <br />
-      Available on:
+      Watch on:
       <br />
       {props.selected.locations.map((platform, index) => (<Platforms key={index} platform={platform} />))}
     </div>
