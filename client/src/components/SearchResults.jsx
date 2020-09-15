@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import MovieEntry from './MovieEntry.jsx';
 import ResultsEntry from './ResultsEntry.jsx';
 import Modal from './Modal.jsx';
+import { Spinner } from 'react-bootstrap';
 
 const SearchResults = (props) => {
   const [ results, setResults ] = useState([]);
@@ -28,7 +29,7 @@ const SearchResults = (props) => {
     <div>
       <div className="results">
         <div className="sectionHeader">
-          {results.length > 0 ? 'Results': 'No results found'}
+          {results.length > 0 ? 'Results' : <div><img src="https://mvp-stream.s3-us-west-1.amazonaws.com/spinner.gif" style={{width: 15, height: 15}} /> Searching...</div> }
         </div>
         <br />
         <div className="searchRow" align="center">
