@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import MovieEntry from './MovieEntry.jsx';
 import ResultsEntry from './ResultsEntry.jsx';
 import Modal from './Modal.jsx';
 import { Spinner } from 'react-bootstrap';

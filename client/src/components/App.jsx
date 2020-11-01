@@ -36,7 +36,7 @@ const App = () => {
         {!displayHome ? <SearchResults results={searchResults} /> : null}
       </div>
     </div>
-  )
+  );
 
 }
 
