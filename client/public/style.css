@@ -98,7 +98,9 @@ button:hover {
   color: #000;
   font-weight: 600;
   width: 400px;
+  text-align: left;
   border: 0px dashed green;
+
 }
 
 .searchRow,

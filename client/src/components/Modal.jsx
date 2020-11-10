@@ -7,11 +7,11 @@ const Modal = (props) => {
       <div align="right">
         <button onClick={props.closeModal}> &nbsp;X&nbsp; </button>
       </div>
-      <div className="selectTitle">
+      <div className="selectTitle" align="left">
         <br/>
         <b>{props.selected.name} ({props.selectedInfo.Year})</b>
       </div>
-      <div>
+      <div align="left">
         <br />
         <b>Plot:</b> {props.selectedInfo.Plot}
         <br /><br />
@@ -19,7 +19,7 @@ const Modal = (props) => {
         <br /><br />
         <b>Runtime:</b> {props.selectedInfo.Runtime}
       </div>
-      <div>
+      <div align="left">
         <h3><i>Watch on:</i></h3>
       </div>
       <div>
