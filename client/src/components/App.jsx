@@ -25,15 +25,15 @@ const App = () => {
 
   return (
     <div className="main">
-      <div>
-       <center><h1>stream &#8682;</h1></center>
-      </div>
+      <center><h1>stream &#8682;</h1></center>
       <div className="body">
         <div>
           {displayHome ? <SearchBar changeHome={hideHome} getSearchResults={getSearchResults}/> : <button onClick={showHome}> {'<< back'} </button>}
         </div>
         <br />
+        <center>
         {!displayHome ? <SearchResults results={searchResults} /> : null}
+        </center>
       </div>
     </div>
   );
