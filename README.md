@@ -44,3 +44,7 @@ From within the root folder run:
 ```
 npm start
 ```
+
+## Demo
+
+![Demo](demo.gif)
