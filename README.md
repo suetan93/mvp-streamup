@@ -31,15 +31,21 @@ module.exports = {
 
 ## Installation
 
-From within the root folder run:
+From within the root folder run the following:
 
-**To install dependencies:**
+**To install dependencies**
 
-```bash
+```
  npm install
 ```
 
-**To start the server:**
+**To start Webpack**
+
+```
+npm run react-dev
+```
+
+**To start the server**
 
 ```
 npm start
