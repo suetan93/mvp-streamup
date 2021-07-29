@@ -2,8 +2,6 @@
 
  StreamUP is a search engine to find streaming services for movies and shows.
 
- [Live App](http://54.193.146.179:3007/)
-
 
 ## Technologies
 
